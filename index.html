@@ -50,7 +50,7 @@
                                     <th>Id</th>
                                     <th>Created at</th>
                                     <th>State</th>
-                                    <th>service</th>
+                                    <th>Description</th>
                                     <th>Resolve</th>
                                     <th>Acknowledge</th>
                                 </tr>
@@ -60,7 +60,7 @@
                                     <td><a href="{{incident.html_url}}" target="_blank">{{incident.incident_number}}</a></td>
                                     <td>{{fromNow(incident.created_at)}}</td>
                                     <td>{{incident.status}}</td>
-                                    <td>{{incident.incident_key}}</td>
+                                    <td>{{incident.description}}</td>
                                     <td><span class="glyphicon glyphicon-thumbs-up"></span></td>
                                     <td><span class="glyphicon glyphicon-ok"></span></td>
                                 </tr>
