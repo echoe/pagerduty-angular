@@ -47,20 +47,20 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Id</th>
+                                    <th>Description</th>
                                     <th>Created at</th>
                                     <th>State</th>
-                                    <th>Description</th>
+                                    <th>ID</th>
                                     <th>Resolve</th>
                                     <th>Acknowledge</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="incident in incidents | filter:search | filter:byState | offset: currentPage*itemsPerPage | limitTo: itemsPerPage | orderBy:'-incident_number'" ng-show="incident.incident_number" ng-class="{'danger': incident.status === 'triggered', 'success': incident.status === 'resolved', 'warning': incident.status === 'acknowledged'}">
-                                    <td><a href="{{incident.html_url}}" target="_blank">{{incident.incident_number}}</a></td>
+                                    <td><a href="{{incident.html_url}}" target="_blank">{{incident.description}}</a></td>
                                     <td>{{fromNow(incident.created_at)}}</td>
                                     <td>{{incident.status}}</td>
-                                    <td>{{incident.description}}</td>
+                                    <td>{{incident.incident_number}}</td>
                                     <td><span class="glyphicon glyphicon-thumbs-up"></span></td>
                                     <td><span class="glyphicon glyphicon-ok"></span></td>
                                 </tr>
