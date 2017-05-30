@@ -51,8 +51,7 @@
                                     <th>Created at</th>
                                     <th>State</th>
                                     <th>ID</th>
-                                    <th>Resolve</th>
-                                    <th>Acknowledge</th>
+                                    <th>Oncall</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,8 +60,7 @@
                                     <td>{{fromNow(incident.created_at)}}</td>
                                     <td>{{incident.status}}</td>
                                     <td>{{incident.incident_number}}</td>
-                                    <td><span class="glyphicon glyphicon-thumbs-up"></span></td>
-                                    <td><span class="glyphicon glyphicon-ok"></span></td>
+                                    <td><a href="{{incident.escalation_policy.html_url}}" target="_blank">{{incident.escalation_policy.summary}}</a></td>
                                 </tr>
                             </tbody>
                         </table>
